@@ -1,19 +1,57 @@
-.buttons {
-    display: flex;
-    height: 300px;
-    width: 500px;
-}
-.digit-buttons {
+
+.container {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    border: solid 2px gray;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .buttons {
     display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    border: solid 2px gray;
+    border-radius: 5px;
+    padding: 5px;
+      
+  }
+  .digit-buttons {
+    display: grid;
+    grid-row: 2/5;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-}
-.operator-buttons {
+  
+  }
+  .operator-buttons {
+    grid-column: 2/3;
+    grid-row: 2/5;
     display: flex;
     flex-direction: column;
-    height: 200px;
-}
-.display {
+  }
+  .execution-buttons {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+  }
+  .display {
     height: 25px;
-    background-color: aquamarine;
-}
+    background-color: beige;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    padding: 5px;
+  }
+  button,
+  .operator-buttons,
+  .display {
+      border-radius: 5px;
+  }
+  #zero-num-button {
+      grid-column: 2/3;
+  }
+  button {
+      margin: 3px;
+    padding: 0 8px;
+  }
+  
